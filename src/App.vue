@@ -15,6 +15,9 @@ export default Vue.extend({
   name: 'App',
   components: {
     AppBar
-  }
+  },
+  beforeCreate() {
+    this.$vuetify.theme.dark = localStorage.getItem('dark') === 'true';
+  },
 });
 </script>
